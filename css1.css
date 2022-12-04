@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Arvo:wght@400;700&family=Syne+Mono&display=swap');
+
+.window{
+    display: grid;
+    grid-auto-columns: 1050px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Alata', sans-serif;
+}
+
+body{
+    background-color: #E1E1E1;
+}
+
+
+/** Title and subtitle **/
+
+.mainTitle{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.mainTitle h1{
+    font-size: 50px;
+    font-family:'Arvo', serif;
+    initial-value: 1000;
+}
+
+.mainTitle h1,p{
+    margin:0px
+}
+
+.mainTitle p{
+    margin-top:10px;
+    font-size: 16px;
+    font-family: 'Alata', sans-serif;
+    font-weight: lighter;
+}
+
+/** This is the first nav bar**/
+
+.topbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    border: thin dashed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right: none;
+    border-left: none;
+    border-top: thin dashed rgba(255, 255, 255, 0.612);
+    border-bottom: thin dashed rgba(0, 0, 0, 0.234);
+}
+
+.navbar{
+        list-style-type: none;
+        margin:none;
+        padding: 0;
+        width: 60px;
+        display: flex;
+}
+
+
+
+.navbar span{
+    cursor:pointer;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top:5px;
+    border-right: thin dashed rgba(0, 0, 0, 0.234);
+    padding-right: 30px;
+}
+
+.navbar span:hover{
+    font-weight: bold;
+}
+
+.navbar span:last-child{
+    border-right: none;
+}
+
+.btnbar{
+    cursor:pointer;
+    display: flex;
+}
+
+.topBarInput{
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.234);
+    border-radius: 2px;
+}
+
+.topBarBtn{
+    cursor:pointer;
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.234);;
+}
+
+.topBarBtn:hover{
+    background-color: #E1E1E1;
+    color: black;
+}
+
+/**Image carrusel, it is made of arrows, changing images and boxes**/
+
+.slider{
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    height: 350px;
+    border: 10px solid white ;
+    border-radius: 10px;
+    box-shadow : 0 0 10px rgba(0, 0, 0, 0.493);
+}
+
+.slider img{
+width: 100%;
+object-fit: cover;
+scroll-snap-align: center;
+}s
+
+/** Read more card with designs **/
+
+.topTextBox{
+    background-color: rgb(181 177 177 / 23%);
+    padding-top:15px ;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    margin-top: 35px;
+    border-radius: 10px;
+    border: 1px dashed rgba(152, 152, 152, 0.209);
+}
+
+.topTextBox p{
+    text-align: justify
+}
+
+
+/** This part is dedicated to the "read more" message below the carrusel of pictures **/
+
+.TextPart2{
+    display: none
+}
+
+.label1{
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.label2{
+    cursor:pointer;
+    display: none;
+    font-weight: bold;
+}
+
+#check{
+    display:none;
+}
+
+#unCheck{
+    display:none
+}
+
+#check:checked ~ .TextPart2{
+    display: flex;
+}
+
+#check:checked ~ .label2{
+    display: flex;
+}
+
+#check:checked ~ .label1{
+    display: none;
+}
+
+#unCheck:checked ~ .TextPart2{
+    display:none;
+}
+
+
+/** this part is for the image boxes and else **/
+
+.secondContainer{
+    margin-top:30px;
+    border-bottom: thin dashed #cdcdcd;
+}
+
+.middleBar{
+    list-style-type: none;
+    overflow: hidden;
+    display: block;
+    padding-left:10px ;
+    margin-bottom: -10px;
+}
+
+.middleBar li{
+    float: left;
+}
+
+.middleBar h2{
+    font-size: 20px;
+    color:rgb(55, 55, 55);
+}
+
+
+.dropDown1{
+    cursor:pointer;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(238, 237, 237);
+    border:none;
+    border-radius: 2px;
+    color:rgb(55, 55, 55);
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+
+.btnMiddleBarRight{
+    cursor:pointer;
+    border-left: none;
+    border-right:none;
+    border-top:none;
+    border-bottom:none;
+    color:rgb(55, 55, 55);
+    background-color: rgb(238, 237, 237);
+    border-top-right-radius:5px ;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    margin: 0px;
+}
+
+.btnMiddleBarLeft{
+    cursor:pointer;
+    border-left: none;
+    border-right: none;
+    border-top:none;
+    border-bottom:none;
+    color:rgb(55, 55, 55);
+    background-color: rgb(238, 237, 237);
+    border-top-left-radius:5px ;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    margin: 0px;
+}
+
+.btnMiddleBarRight:hover{
+    background-color: #E1E1E1;
+    color: black;
+}
+
+.btnMiddleBarLeft:hover{
+    background-color: #E1E1E1;
+    color: black;
+}
+
+/* Image box  border and a big grid*/
+
+.boxImgBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+.boxImgBorder{
+    overflow: hidden;
+    height: 150px;
+    width: 310px;
+    border: 10px solid white ;
+    border-radius: 5px;
+    margin-bottom: 27px;
+}
+
+.bImage1{
+    background-color: rgba(255, 166, 0, 0.388);
+    background-image: url("./assets/img1gif.gif"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.bImage2{
+    background-color: rgba(181, 171, 153, 0.388);
+    background-image: url("./assets/gif2.gif"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.bImage3{
+    background-color: rgba(0, 255, 225, 0.388);
+    background-image: url("./assets/gif3.gif"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.bImage4{
+    background-color: rgba(255, 255, 0, 0.388);
+    background-image: url("./assets/gif4.gif"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.bImage5{
+    background-color: rgba(121, 121, 73, 0.388);
+    background-image: url("./assets/gif5.jpg"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.bImage6{
+    background-color: rgba(0, 60, 255, 0.388);
+    background-image: url("./assets/gif6.jpg"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.bImage7{
+    background-color: rgba(54, 54, 48, 0.388);
+    background-image: url("./assets/gif7.jpg"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.bImage8{
+    background-color: rgba(246, 246, 73, 0.388);
+    background-image: url("./assets/gif8.jpg"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.bImage9{
+    background-color: rgba(0, 255, 179, 0.388);
+    background-image: url("./assets/gif9.gif"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+/** buttom bar and buttons **/
+
+.bottomBar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    box-sizing: border-box;
+    margin-top: -10px;
+    margin-bottom:20px;
+}
+
+.dropDown2{
+    cursor:pointer;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(238, 237, 237);
+    border:none;
+    border-radius: 2px;
+    color:rgb(55, 55, 55);
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+/** this indicates the third container starts **/
+
+.thirdContainer{
+    border-top: 1px solid rgba(255, 255, 255, 0.469);
+}
+
+/** organizing the triple card that will contain the 3 cards **/
+
+.tripleBox{
+    display: flex;
+    background-color: rgb(238, 237, 237);
+    padding-top:15px ;
+    padding-left: 5px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    margin-top:0px;
+    border-radius: 10px;
+    border: 1px dashed rgba(152, 152, 152, 0.209);
+    text-justify: auto;
+}
+
+.tripleBox h3{
+    margin-left: 15px;
+    color:rgb(55, 55, 55);
+}
+
+.tripleBox h4{
+    font-size: 15px;
+    color:rgb(55, 55, 55);
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.tripleBox div:nth-child(2n){
+    border-left: 1px dashed rgba(152, 152, 152, 0.209);
+    border-right: 1px dashed rgba(152, 152, 152, 0.209);
+}
+
+
+
+/** this is all the info about the cards **/
+
+.card1{
+    overflow: hidden;
+    width: 335px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+/** we will be adding now the images to this **/
+
+.cardImg{
+    height: 75px;
+    width: 75px;
+    background-color: transparent;
+    float:left;
+    margin-right:10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    border: 1px solid transparent;
+}
+
+.lilImg1{
+    background-color: rgba(0, 255, 179, 0.388);
+    background-image: url("./assets/small1.jpg"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+.lilImg2{
+    background-color: rgba(0, 255, 179, 0.388);
+    background-image: url("./assets/small2.jpg"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+.lilImg3{
+    background-color: rgba(0, 255, 179, 0.388);
+    background-image: url("./assets/small3.jpg"); /* The image used */
+    height: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+/** this part is for the triple card, starting with the read more reand less **/
+
+.cardText{
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+.cardTextPart2{
+    display: none
+}
+
+.cardLabel1{
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.cardLabel2{
+    cursor:pointer;
+    display: none;
+    font-weight: bold;
+}
+
+#cardCheck{
+    display:none;
+}
+
+#cardUncheck{
+    display:none
+}
+
+#cardCheck:checked ~ .cardTextPart2{
+    display: flex;
+}
+
+#cardCheck:checked ~ .cardLabel2{
+    display: flex;
+}
+
+#cardCheck:checked ~ .cardLabel1{
+    display: none;
+}
+
+#cardUncheck:checked ~ .cardTextPart2{
+    display:none;
+}
+
+.cardTextB{
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+.cardTextPart2B{
+    display: none
+}
+
+.cardLabel1B{
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.cardLabel2B{
+    cursor:pointer;
+    display: none;
+    font-weight: bold;
+}
+
+#cardCheckB{
+    display:none;
+}
+
+#cardUncheckB{
+    display:none
+}
+
+#cardCheckB:checked ~ .cardTextPart2B{
+    display: flex;
+}
+
+#cardCheckB:checked ~ .cardLabel2B{
+    display: flex;
+}
+
+#cardCheckB:checked ~ .cardLabel1B{
+    display: none;
+}
+
+#cardUncheckB:checked ~ .cardTextPart2B{
+    display:none;
+}
+
+.cardTextC{
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+.cardTextPart2C{
+    display: none
+}
+
+.cardLabel1C{
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.cardLabel2C{
+    cursor:pointer;
+    display: none;
+    font-weight: bold;
+}
+
+#cardCheckC{
+    display:none;
+}
+
+#cardUncheckC{
+    display:none
+}
+
+#cardCheckC:checked ~ .cardTextPart2C{
+    display: flex;
+}
+
+#cardCheckC:checked ~ .cardLabel2C{
+    display: flex;
+}
+
+#cardCheckC:checked ~ .cardLabel1C{
+    display: none;
+}
+
+#cardUncheckC:checked ~ .cardTextPart2C{
+    display:none;
+}
+
+/** ending sub title**/
+
+.endingTitle{
+    display: flex;
+    margin-right: 15px;
+    margin-top: 5px;
+    color:rgb(55, 55, 55);
+    justify-content: right;
+}
+
+.endingTitle:hover{
+    cursor:pointer;
+    font-weight: bold;
+}
+
+/** this is the footer of the page, it is the brown box in which ill place different boxes **/
+
+.footer{
+    margin-top: 30px;
+    background-color: #4D4948;
+    width: 100%;
+    height: 215px;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+}
+
+/** dedicated to the content inside it **/
+
+.footerMargin{
+    grid-auto-columns: 1050px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Alata', sans-serif;
+}
+
+.bottomNavbar{
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    padding-left: 10px;
+    padding-left: 10px;
+    border-bottom: thin dashed #a19c9b8e;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.bottomNavbar li{
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-top: 5px;
+    padding-right: 30px;
+    font-size: 18px;
+    color: #a19c9b;
+    margin-bottom: 15px;
+    float: left;
+    margin-right: 40px;
+    margin-left: 5px;
+    display: flex;
+}
+
+.bottomNavbar li:hover{
+    font-weight: bold;
+}
+
+
+.bottomNavbar button{
+    cursor: pointer;
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    color: #4D4948;
+    background-color:#a19c9b;
+}
+
+.bottomNavbar button:hover{
+    background-color:#a19c9b5d;
+}
+
+/** text boxes, and the end of the project **/
+
+.finalText{
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottomTextBox1{
+    overflow: hidden;
+    width:600px;
+    height:115px;
+    background-color:transparent;
+    color:#a19c9bc9;
+}
+
+.bottomTextBox2{
+    overflow: hidden;
+    width: 245px;
+    height:115px;
+    background-color:transparent;
+    color: #a19c9b;;
+}
+
